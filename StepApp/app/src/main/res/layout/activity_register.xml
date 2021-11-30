@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/penguin"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Register"
+        android:textColor="#A86C14"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:id="@+id/txt"
+        android:textSize="34dp"/>
+
+    <EditText
+        android:id="@+id/login_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/input_shape"
+        android:hint="Username..."
+        android:inputType="textPersonName"
+        android:padding="16dp"
+        android:singleLine="true"
+        android:textColorHint="#B7FFFFFF"
+        android:textStyle="bold" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/login_username"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/input_shape"
+        android:padding="16dp"
+        android:inputType="textEmailAddress"
+        android:hint="Email..."
+        android:textStyle="bold"
+        android:textColorHint="#B7FFFFFF"
+        android:id="@+id/input_email" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/input_email"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/input_shape"
+        android:padding="16dp"
+        android:inputType="textPassword"
+        android:hint="Password..."
+        android:textStyle="bold"
+        android:textColorHint="#B7FFFFFF"
+        android:id="@+id/login_password" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/login_password"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/input_shape"
+        android:padding="16dp"
+        android:inputType="textPassword"
+        android:hint="Confirm Password..."
+        android:textStyle="bold"
+        android:textColorHint="#B7FFFFFF"
+        android:id="@+id/input_confirmpassword" />
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_confirmpassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="33dp"
+        android:background="#A86C14"
+        android:text="Register"
+        android:textColor="#B7FFFFFF"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/register_btn"
+        android:text=" Already have an account?"
+        android:textStyle="bold"
+        android:textColor="#B7FFFFFF"
+        android:id="@+id/alreadyacount"
+        android:padding="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/input_shape"/>
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
