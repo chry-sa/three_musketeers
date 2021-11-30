@@ -8,12 +8,12 @@
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-hdpi/ic_phone_foreground.png"
     },
     {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_stop_24px.xml.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_stop_24px.xml"
-    },
-    {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/layout_fragment_hour.xml.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/layout/fragment_hour.xml"
+    },
+    {
+        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_stop_24px.xml.flat",
+        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_stop_24px.xml"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_penguin_round.png.flat",
@@ -40,24 +40,16 @@
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_facebook.xml.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_facebook.xml"
-    },
-    {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/layout_fragment_profile.xml.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/layout/fragment_profile.xml"
     },
     {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_phone_round.xml.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-anydpi-v26/ic_phone_round.xml"
+        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_facebook.xml.flat",
+        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_facebook.xml"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_share_24px.xml.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_share_24px.xml"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_penguin_foreground.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxxhdpi/ic_penguin_foreground.png"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_penguin.png.flat",
@@ -72,8 +64,8 @@
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_appicon.xml"
     },
     {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_penguinbottom.png.flat",
+        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/penguinbottom.png"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_penguin_background.png.flat",
@@ -88,32 +80,16 @@
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/btn_shape.xml"
     },
     {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_penguin_background.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxxhdpi/ic_penguin_background.png"
-    },
-    {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_penguin.jpg.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/penguin.jpg"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_penguin.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxhdpi/ic_penguin.png"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_menu_gallery.xml.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_menu_gallery.xml"
     },
     {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_penguin_round.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxhdpi/ic_penguin_round.png"
-    },
-    {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic__3003354851543238910.xml.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic__3003354851543238910.xml"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_penguin_round.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxxhdpi/ic_penguin_round.png"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
@@ -128,24 +104,12 @@
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/layout/fragment_home.xml"
     },
     {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_phone.xml.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-anydpi-v26/ic_phone.xml"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_background.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png"
-    },
-    {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_penguin_round.png.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xhdpi/ic_penguin_round.png"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_trophy.xml.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_trophy.xml"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_penguin_foreground.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxhdpi/ic_penguin_foreground.png"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -174,10 +138,6 @@
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_play_24px.xml.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_play_24px.xml"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_menu_calorie.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxxhdpi/ic_menu_calorie.png"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_penguin_foreground.png.flat",
@@ -218,14 +178,6 @@
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_background.png.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-hdpi/ic_launcher_background.png"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_background.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_background.png"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_menu_calorie.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxhdpi/ic_menu_calorie.png"
     },
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_phone_foreground.png.flat",
@@ -290,17 +242,5 @@
     {
         "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/drawable_ic_menu_step.xml.flat",
         "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/drawable/ic_menu_step.xml"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_penguin_background.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxhdpi/ic_penguin_background.png"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
-    },
-    {
-        "merged": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_penguin.png.flat",
-        "source": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/res/mipmap-xxxhdpi/ic_penguin.png"
     }
 ]

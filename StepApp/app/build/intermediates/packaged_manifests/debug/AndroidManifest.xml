@@ -7,11 +7,6 @@
     <uses-sdk
         android:minSdkVersion="26"
         android:targetSdkVersion="30" />
-    <!-- Required for 28 and below. -->
-    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" /> <!-- Required for 29+. -->
-    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -19,27 +14,20 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:icon="@drawable/ic_appicon"
-        android:label="@string/app_name"
+        android:label="Registration"
         android:roundIcon="@drawable/ic_appicon"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.example.stepapp.LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name="com.example.stepapp.RegisterActivity"
-            android:exported="true" />
-                 <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        android:theme="@style/AppTheme.NoActionBar" >
+        <activity android:name="com.example.stepapp.LoginActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-           </intent-filter>
-
-        <activity
-            android:name="com.example.stepapp.MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.stepapp.RegisterActivity" />
+        <activity android:name="com.example.stepapp.MainActivity" >
         </activity>
 
         <provider
