@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.TreeMap;
 public class StepAppOpenHelper extends SQLiteOpenHelper {
 
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "stepapp";
 
     public static final String TABLE_NAME = "num_steps";
@@ -25,11 +26,24 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
     public static final String KEY_HOUR = "hour";
     public static final String KEY_DAY = "day";
 
+    public static final String TABLE_NAME_2= "Users";
+    public static final String KEY_USER= "user";
+    public static final String KEY_AGE= "age";
+    public static final String KEY_EMAIL= "email";
+    public static final String KEY_PASS= "password";
+
+
+
+
+
 
     // Default SQL for creating a table in a database
     public static final String CREATE_TABLE_SQL = "CREATE TABLE " + TABLE_NAME + " (" +
-            KEY_ID + " INTEGER PRIMARY KEY, " + KEY_DAY + " TEXT, " + KEY_HOUR + " TEXT, "
+            KEY_ID + " INTEGER PRIMARY KEY, " +KEY_USER +" TEXT, "+ KEY_DAY + " TEXT, " + KEY_HOUR + " TEXT, "
             + KEY_TIMESTAMP + " TEXT);";
+
+    public static final String CREATE_USER_TABLE_SQL = "CREATE TABLE " + TABLE_NAME_2 + " (" +
+            KEY_USER + " TEXT PRIMARY KEY," + KEY_AGE + " INTEGER, "  + KEY_EMAIL + " TEXT, " + KEY_PASS + " TEXT);";
 
 
     // The constructor
@@ -42,6 +56,7 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLE_SQL);
+        db.execSQL(CREATE_USER_TABLE_SQL);
 
     }
 
@@ -70,6 +85,7 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
             dates.add(cursor.getString(0));
             cursor.moveToNext();
         }
+        cursor.close();
         database.close();
 
         Log.d("STORED TIMESTAMPS: ", String.valueOf(dates));
@@ -119,6 +135,7 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
             cursor.moveToNext();
         }
         database.close();
+        cursor.close();
 
         Integer numSteps = steps.size();
         Log.d("STORED STEPS TODAY: ", String.valueOf(numSteps));
@@ -143,7 +160,7 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
 
         // 3. Define the query to get the data
         Cursor cursor = database.rawQuery("SELECT hour, COUNT(*)  FROM num_steps " +
-                "WHERE day = ? GROUP BY hour ORDER BY  hour ASC ", new String [] {date});
+                "WHERE day = ?  GROUP BY hour ORDER BY  hour ASC ", new String [] {date});
 
         // 4. Iterate over returned elements on the cursor
         cursor.moveToFirst();
@@ -164,6 +181,43 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
 
         // 6. Return the map with hours and number of steps
         return map;
+    }
+
+    public static Integer user_login(Context context, String usr, String pass){
+        // 1. Define a map to store the hour and number of steps as key-value pairs
+        ArrayList<String> quser = new ArrayList<>();
+
+        // 2. Get the readable database
+        StepAppOpenHelper databaseHelper = new StepAppOpenHelper(context);
+        SQLiteDatabase database = databaseHelper.getReadableDatabase();
+
+        // 3. Define the query to get the data
+        Cursor cursor = database.rawQuery("SELECT user  FROM Users " +
+                "WHERE user = ? and password = ? ", new String[]{usr,pass});
+
+        // 4. Iterate over returned elements on the cursor
+        cursor.moveToFirst();
+        for (int index=0; index < cursor.getCount(); index++){
+            String tmpKey = cursor.getString(0);
+
+            //2. Put the data from the database into the map
+            quser.add(tmpKey);
+
+
+            cursor.moveToNext();
+        }
+
+        // 5. Close the cursor and database
+        cursor.close();
+        database.close();
+
+        if (quser.size()>0){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+
     }
 
     /**

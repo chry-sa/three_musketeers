@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
+            "outputFile": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/Users/nikolaosmyrillas/.gradle/caches/transforms-3/8190198988f5dc1a233e0c21b4a74ad8/transformed/appcompat-1.2.0/res/values-land/values-land.xml",
+                    "source": "/Users/oasc/.gradle/caches/transforms-3/8190198988f5dc1a233e0c21b4a74ad8/transformed/appcompat-1.2.0/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/nikolaosmyrillas/.gradle/caches/transforms-3/e06ebd1b715f51b78d4c4c9ae709c8a8/transformed/material-1.2.1/res/values-land/values-land.xml",
+                    "source": "/Users/oasc/.gradle/caches/transforms-3/e06ebd1b715f51b78d4c4c9ae709c8a8/transformed/material-1.2.1/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,24,30",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

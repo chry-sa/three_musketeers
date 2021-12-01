@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
     private boolean runningQOrLater =
             android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q;
 
+    public String logged_user="guest";
+
+
 
 
     @Override
@@ -47,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            logged_user = extras.getString("key");
+            //Logged user
+        }
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -207,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
                     getActivity();
                 }  else {
                     Toast.makeText(this,
-                            R.string.permission_denied,
+                            R.string.permission_denied ,
                             Toast.LENGTH_SHORT).show();
                 }
 
@@ -228,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
                     getReadExternalStorage();
                 }  else {
                     Toast.makeText(this,
-                            R.string.permission_denied,
+                            R.string.permission_denied ,
                             Toast.LENGTH_SHORT).show();
                 }
         }

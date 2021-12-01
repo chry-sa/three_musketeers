@@ -6,61 +6,61 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml
+8-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml
+9-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:6:5-27:19
+11-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:6:5-27:19
 12        android:allowBackup="true"
-12-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:8:9-35
+12-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:8:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.3.1] /Users/nikolaosmyrillas/.gradle/caches/transforms-3/d2d82602dbe4e040fb47b7f3d4ad9d83/transformed/core-1.3.1/AndroidManifest.xml:24:18-86
+13-->[androidx.core:core:1.3.1] /Users/oasc/.gradle/caches/transforms-3/d2d82602dbe4e040fb47b7f3d4ad9d83/transformed/core-1.3.1/AndroidManifest.xml:24:18-86
 14        android:debuggable="true"
 15        android:extractNativeLibs="false"
 16        android:icon="@drawable/ic_appicon"
-16-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:9:9-44
-17        android:label="Registration"
-17-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:10:9-37
+16-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:9:9-44
+17        android:label="Happy feet"
+17-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:10:9-35
 18        android:roundIcon="@drawable/ic_appicon"
-18-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:11:9-49
+18-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:11:9-49
 19        android:supportsRtl="true"
-19-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:12:9-35
+19-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:12:9-35
 20        android:testOnly="true"
 21        android:theme="@style/AppTheme.NoActionBar" >
-21-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:13:9-52
+21-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:13:9-52
 22        <activity android:name="com.example.stepapp.LoginActivity" >
-22-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:14:9-20:20
-22-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:14:19-48
+22-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:14:9-20:20
+22-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:14:19-48
 23            <intent-filter>
-23-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:15:13-19:29
+23-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:15:13-19:29
 24                <action android:name="android.intent.action.MAIN" />
-24-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:16:17-69
-24-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:16:25-66
+24-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:16:17-69
+24-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:16:25-66
 25
 26                <category android:name="android.intent.category.LAUNCHER" />
-26-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:18:17-77
-26-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:18:27-74
+26-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:18:17-77
+26-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:18:27-74
 27            </intent-filter>
 28        </activity>
 29        <activity android:name="com.example.stepapp.RegisterActivity" />
-29-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:21:9-53
-29-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:21:19-51
+29-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:21:9-53
+29-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:21:19-51
 30        <activity android:name="com.example.stepapp.MainActivity" >
-30-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:22:9-24:20
-30-->/Users/nikolaosmyrillas/Desktop/StepAppT06_StarterApp/StepApp/app/src/main/AndroidManifest.xml:22:19-47
+30-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:22:9-24:20
+30-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:22:19-47
 31        </activity>
 32
 33        <provider
-33-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/nikolaosmyrillas/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+33-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
 34            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-34-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/nikolaosmyrillas/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+34-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
 35            android:authorities="com.example.stepapp.lifecycle-process"
-35-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/nikolaosmyrillas/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+35-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
 36            android:exported="false"
-36-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/nikolaosmyrillas/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+36-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
 37            android:multiprocess="true" />
-37-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/nikolaosmyrillas/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+37-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
 38    </application>
 39
 40</manifest>

@@ -1716,6 +1716,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id age
 id alertTitle
 id aligned
 id all
@@ -1836,7 +1837,6 @@ id ignoreRequest
 id image
 id imageView
 id info
-id input_confirmpassword
 id input_email
 id invisible
 id italic
@@ -1938,7 +1938,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id register_btn
+id register
 id reset_password
 id reverseSawtooth
 id right

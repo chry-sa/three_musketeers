@@ -33,7 +33,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="70dp"
         android:background="@drawable/input_shape"
-        android:hint="Username..."
+        android:hint="Full Name"
         android:inputType="textPersonName"
         android:padding="16dp"
         android:singleLine="true"
@@ -48,8 +48,22 @@
         android:layout_marginRight="70dp"
         android:background="@drawable/input_shape"
         android:padding="16dp"
+        android:inputType="textPassword"
+        android:hint="Age"
+        android:textStyle="bold"
+        android:textColorHint="#B7FFFFFF"
+        android:id="@+id/age" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/age"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/input_shape"
+        android:padding="16dp"
         android:inputType="textEmailAddress"
-        android:hint="Email..."
+        android:hint="Email"
         android:textStyle="bold"
         android:textColorHint="#B7FFFFFF"
         android:id="@+id/input_email" />
@@ -64,30 +78,18 @@
         android:background="@drawable/input_shape"
         android:padding="16dp"
         android:inputType="textPassword"
-        android:hint="Password..."
+        android:hint="Password"
         android:textStyle="bold"
         android:textColorHint="#B7FFFFFF"
         android:id="@+id/login_password" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/login_password"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="70dp"
-        android:background="@drawable/input_shape"
-        android:padding="16dp"
-        android:inputType="textPassword"
-        android:hint="Confirm Password..."
-        android:textStyle="bold"
-        android:textColorHint="#B7FFFFFF"
-        android:id="@+id/input_confirmpassword" />
+
+
 
     <Button
-        android:id="@+id/register_btn"
+        android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/input_confirmpassword"
+        android:layout_below="@+id/login_password"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="70dp"
         android:layout_marginTop="33dp"
@@ -99,7 +101,7 @@
         android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/register_btn"
+        android:layout_below="@+id/register"
         android:text=" Already have an account?"
         android:textStyle="bold"
         android:textColor="#B7FFFFFF"
@@ -109,14 +111,6 @@
         android:background="@drawable/input_shape"/>
 
 
-
-
-
-
-
-
-
-
-
-
 </RelativeLayout>
+
+

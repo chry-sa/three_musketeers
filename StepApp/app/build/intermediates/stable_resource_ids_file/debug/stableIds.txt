@@ -1,3 +1,4 @@
+com.example.stepapp:id/age = 0x7f0801a4
 com.example.stepapp:string/abc_searchview_description_query = 0x7f100015
 com.example.stepapp:styleable/CollapsingToolbarLayout_Layout = 0x7f12001c
 com.example.stepapp:style/Widget.MaterialComponents.MaterialButtonToggleGroup = 0x7f11028a
@@ -2155,6 +2156,7 @@ com.example.stepapp:attr/listItemLayout = 0x7f0301fd
 com.example.stepapp:attr/buttonBarButtonStyle = 0x7f03006b
 com.example.stepapp:attr/flow_firstVerticalStyle = 0x7f030151
 com.example.stepapp:attr/itemHorizontalTranslationEnabled = 0x7f030197
+com.example.stepapp:id/register = 0x7f0801a5
 com.example.stepapp:attr/placeholderText = 0x7f030265
 com.example.stepapp:attr/listChoiceBackgroundIndicator = 0x7f0301f9
 com.example.stepapp:attr/layout_constraintCircleRadius = 0x7f0301c5

@@ -69,18 +69,19 @@
         android:padding="1dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/input_shape"/>
+
     <Button
+        android:id="@+id/login_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_password"
-        android:layout_marginTop="33dp"
-        android:layout_marginLeft="70dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="33dp"
         android:background="#A86C14"
         android:text="Login"
-        android:textStyle="bold"
         android:textColor="#B7FFFFFF"
-        android:id="@+id/login_btn"/>
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnToSignUp"
@@ -131,34 +132,34 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/login_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/divider"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="70dp"
         android:layout_centerHorizontal="true"
-        android:text="Phone"
-        android:textStyle="bold"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/input_shape"
         android:drawableLeft="@drawable/ic__3003354851543238910"
         android:paddingLeft="10dp"
+        android:text="Phone"
         android:textColor="#A86C14"
-        android:id="@+id/login_phone"/>
+        android:textStyle="bold" />
 
     <Button
+        android:id="@+id/login_facebook"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/login_phone"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="70dp"
         android:layout_centerHorizontal="true"
-        android:text="Facebook"
-        android:textStyle="bold"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/btn_shape_facebook"
         android:drawableLeft="@drawable/ic_facebook"
         android:paddingLeft="10dp"
+        android:text="Facebook"
         android:textColor="#FFffffff"
-        android:id="@+id/login_facebook"/>
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
