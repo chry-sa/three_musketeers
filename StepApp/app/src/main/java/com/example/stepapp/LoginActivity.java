@@ -42,7 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         });
         // add login functionality
         Button loginButton = findViewById(R.id.login_btn);
-        Button fbook = findViewById(R.id.login_facebook);
+
 
         getWriteExternalStorage();
         getReadExternalStorage();
@@ -88,17 +88,6 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        fbook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO: login new user
-
-                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
-
-
-
-            }
-        });
     }
 
     private void getActivity() {

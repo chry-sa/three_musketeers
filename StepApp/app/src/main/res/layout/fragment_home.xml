@@ -92,7 +92,8 @@
             android:layout_height="wrap_content"
             android:text="@string/toggle_start"
             android:textColor="#A86C14"
-            app:icon="@drawable/ic_play_24px" />
+            app:icon="@drawable/ic_play_24px"
+            app:iconTint="#A86C14" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/toggleStop"
@@ -100,7 +101,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toggle_stop"
-            app:icon="@drawable/ic_stop_24px" />
+            android:textColor="#A86C14"
+            app:icon="@drawable/ic_stop_24px"
+            app:iconTint="#A86C14" />
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 

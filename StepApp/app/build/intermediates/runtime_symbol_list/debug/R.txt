@@ -1785,7 +1785,6 @@ int id disableHome 0x7f080087
 int id disablePostScroll 0x7f080088
 int id disableScroll 0x7f080089
 int id divider 0x7f08008a
-int id divider_txt 0x7f08008b
 int id dragDown 0x7f08008c
 int id dragEnd 0x7f08008d
 int id dragLeft 0x7f08008e
@@ -1855,9 +1854,7 @@ int id list_item 0x7f0800ce
 int id loadingBar 0x7f0800cf
 int id loadingBar2 0x7f0800d0
 int id login_btn 0x7f0800d1
-int id login_facebook 0x7f0800d2
 int id login_password 0x7f0800d3
-int id login_phone 0x7f0800d4
 int id login_username 0x7f0800d5
 int id masked 0x7f0800d6
 int id media_actions 0x7f0800d7

@@ -18,9 +18,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="130dp"
         android:text="@string/share"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorBlue"
         app:icon="@drawable/ic_share_24px"
-        app:iconTint="@color/colorPrimary"
+        app:iconTint="@color/colorBlue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.94"
@@ -39,6 +39,7 @@
 
     <ProgressBar
         android:id="@+id/loadingBar"
+        android:indeterminateTint="@color/colorBlue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -53,8 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorBlue"
         android:text="@string/hourly_report"
+        android:textStyle="bold"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -80,7 +82,7 @@
                 android:layout_height="26dp"
                 android:layout_gravity="center"
                 android:background="@drawable/ic_menu_step"
-                android:backgroundTint="@color/colorAccent" />
+                android:backgroundTint="@color/colorBlue" />
 
             <TextView
                 android:id="@+id/numStepsTextView"
@@ -89,7 +91,7 @@
                 android:layout_gravity="center"
                 android:foregroundGravity="center"
                 android:text="@string/_0"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorBlue"
                 android:textSize="36sp" />
 
         </LinearLayout>
@@ -100,6 +102,7 @@
             android:layout_gravity="center"
             android:foregroundGravity="center"
             android:text="@string/steps"
+            android:textColor="@color/colorBlue"
             android:textSize="18sp" />
 
 

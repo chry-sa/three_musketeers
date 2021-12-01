@@ -1786,7 +1786,6 @@ id disableHome
 id disablePostScroll
 id disableScroll
 id divider
-id divider_txt
 id dragDown
 id dragEnd
 id dragLeft
@@ -1856,9 +1855,7 @@ id list_item
 id loadingBar
 id loadingBar2
 id login_btn
-id login_facebook
 id login_password
-id login_phone
 id login_username
 id masked
 id media_actions

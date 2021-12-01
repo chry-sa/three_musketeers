@@ -64,7 +64,7 @@ public class HomeFragment extends Fragment {
 
     // Num of steps completed
     static int stepsCompleted = 0;
-    static int stepsGoal = 44;
+    static int stepsGoal = 10;
 
     //TODO 6: Create a constant for the notification channel ID
     public String PRIMARY_CHANNEL_ID = "primary_notification_channel";
@@ -111,7 +111,7 @@ public class HomeFragment extends Fragment {
         SQLiteDatabase database = databaseOpenHelper.getWritableDatabase();
 
         // Get the Builder object
-        NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
+        NotificationCompat.Builder notifyBuilder = getNotificationBuilder(0);
 
         // Instantiate the StepCounterListener
         listener = new StepCounterListener(notifyBuilder, database, stepsCountTextView, stepsCountProgressBar);
@@ -197,7 +197,18 @@ public class HomeFragment extends Fragment {
     }
 
     // Helper method
-    public NotificationCompat.Builder getNotificationBuilder() {
+    public NotificationCompat.Builder getNotificationBuilder(int  a) {
+
+        String phrase="";
+
+        if (a==0){
+            phrase= "You reached your goal of " + String.valueOf(stepsGoal) + " steps! Let's set new goals and make the penguin happier!";
+        }
+        else if (a==1){
+
+            phrase= "You are doing great.Only " + String.valueOf(stepsGoal) + " steps more!. Keep Pushing ";
+        }
+
 
         // Explicit Intent
         Intent notificationIntent = new Intent(getContext(), MainActivity.class);
@@ -209,7 +220,7 @@ public class HomeFragment extends Fragment {
 
                 // TODO 9: Set the text and the icon
                 notifyBuilder.setContentTitle("Congratulations! You made me very Happy-Feet!")
-                .setContentText("You reached your goal of " + String.valueOf(stepsGoal) + " steps! Let's set new goals and make the penguin happier!")
+                .setContentText(phrase)
                 .setSmallIcon(R.drawable.ic_trophy)
 
                 //TODO 11: Set the intent
