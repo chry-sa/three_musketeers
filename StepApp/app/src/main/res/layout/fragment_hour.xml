@@ -20,7 +20,7 @@
         android:text="@string/share"
         android:textColor="@color/PengGray"
         app:icon="@drawable/ic_share_24px"
-        app:iconTint="@color/colorBlue"
+        app:iconTint="@color/PengGray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.94"

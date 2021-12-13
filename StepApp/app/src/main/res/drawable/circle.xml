@@ -4,5 +4,6 @@
     android:innerRadius="160dp"
     android:thickness="10dp"
     android:useLevel="true">
-    <solid android:color="#3647A6"/>
+    <solid android:color="@color/PengGray"/>
+
 </shape>

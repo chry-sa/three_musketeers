@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity {
                 }  else {
                     Toast.makeText(this,
                          //   R.string.permission_denied ,
-                            "Welcome to happy feet "+logged_user,
+                            "Welcome to happy feet "+logged_user+ ", little penguin.",
                             Toast.LENGTH_SHORT).show();
                 }
 
