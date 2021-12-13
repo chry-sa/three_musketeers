@@ -6,6 +6,8 @@
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlue">#3647A6</color>
     <color name="lightBlue">#A8D7D9</color>
+    <color name="OrangeBeak">#A86C14</color>
+    <color name="PengGray">#404041</color>
 
 
 </resources>

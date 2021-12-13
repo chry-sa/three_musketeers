@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="130dp"
         android:text="@string/share"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/PengGray"
         app:icon="@drawable/ic_share_24px"
         app:iconTint="@color/colorBlue"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,7 +39,7 @@
 
     <ProgressBar
         android:id="@+id/loadingBar"
-        android:indeterminateTint="@color/colorBlue"
+        android:indeterminateTint="@color/OrangeBeak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/PengGray"
         android:text="@string/hourly_report"
         android:textStyle="bold"
         android:textSize="24sp"
@@ -82,7 +82,7 @@
                 android:layout_height="26dp"
                 android:layout_gravity="center"
                 android:background="@drawable/ic_menu_step"
-                android:backgroundTint="@color/colorBlue" />
+                android:backgroundTint="@color/PengGray" />
 
             <TextView
                 android:id="@+id/numStepsTextView"
@@ -91,7 +91,7 @@
                 android:layout_gravity="center"
                 android:foregroundGravity="center"
                 android:text="@string/_0"
-                android:textColor="@color/colorBlue"
+                android:textColor="@color/PengGray"
                 android:textSize="36sp" />
 
         </LinearLayout>
@@ -102,7 +102,7 @@
             android:layout_gravity="center"
             android:foregroundGravity="center"
             android:text="@string/steps"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/PengGray"
             android:textSize="18sp" />
 
 

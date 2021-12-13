@@ -39,20 +39,21 @@
         android:singleLine="true"
         android:textColorHint="#B7FFFFFF"
         android:textStyle="bold" />
+
     <EditText
+        android:id="@+id/age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/login_username"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:layout_marginRight="70dp"
         android:background="@drawable/input_shape"
-        android:padding="16dp"
-        android:inputType="textPassword"
         android:hint="Age"
-        android:textStyle="bold"
+        android:inputType="textNoSuggestions"
+        android:padding="16dp"
         android:textColorHint="#B7FFFFFF"
-        android:id="@+id/age" />
+        android:textStyle="bold" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

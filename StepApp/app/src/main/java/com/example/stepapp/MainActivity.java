@@ -3,6 +3,7 @@ package com.example.stepapp;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.widget.Toast;
@@ -51,10 +52,16 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Log.d("User logged", logged_user);
+
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            logged_user = extras.getString("key");
-            //Logged user
+            logged_user = extras.getString("userLogin");
+
+            Log.d("User logged", logged_user);
+
+
+
         }
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -216,7 +223,8 @@ public class MainActivity extends AppCompatActivity {
                     getActivity();
                 }  else {
                     Toast.makeText(this,
-                            R.string.permission_denied ,
+                         //   R.string.permission_denied ,
+                            "Welcome to happy feet "+logged_user,
                             Toast.LENGTH_SHORT).show();
                 }
 
@@ -226,9 +234,9 @@ public class MainActivity extends AppCompatActivity {
                         grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     getWriteExternalStorage();
                 }  else {
-                    Toast.makeText(this,
-                            R.string.permission_denied,
-                            Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this,
+                    //        R.string.permission_denied,
+                    //        Toast.LENGTH_SHORT).show();
                 }
             case REQUEST_READ_EXTERNAL_STORAGE:
                 // If request is cancelled, the result arrays are empty.
@@ -236,9 +244,9 @@ public class MainActivity extends AppCompatActivity {
                         grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     getReadExternalStorage();
                 }  else {
-                    Toast.makeText(this,
-                            R.string.permission_denied ,
-                            Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this,
+                     //       R.string.permission_denied ,
+                     //       Toast.LENGTH_SHORT).show();
                 }
         }
     }

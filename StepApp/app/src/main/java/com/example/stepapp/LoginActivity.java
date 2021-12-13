@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         String value= user_name.getText().toString();
                         Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                        i.putExtra("logged_user",value);
+                        i.putExtra("userLogin",value);
                         startActivity(i);
                     }
                 }

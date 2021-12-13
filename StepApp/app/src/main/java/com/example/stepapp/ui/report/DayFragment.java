@@ -67,8 +67,10 @@ public class DayFragment extends Fragment {
 
         //Modify the UI of the Column
         //Change the color of bar chart and its border
-        column.fill("#1EB980");
-        column.stroke("#1EB980");
+        //column.fill("#1EB980");
+        //column.stroke("#1EB980");
+        column.fill("#A86C14");
+        column.stroke("#A86C14");
 
         // Add tooltip to the bar charts and modify its properties
         column.tooltip()

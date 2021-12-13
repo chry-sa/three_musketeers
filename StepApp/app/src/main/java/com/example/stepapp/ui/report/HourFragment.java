@@ -135,8 +135,10 @@ public class HourFragment  extends Fragment {
 
         //***** Modify the UI of the chart *********/
         // Change the color of column chart and its border
-        column.fill("#1EB980");
-        column.stroke("#1EB980");
+        column.fill("#A86C14");
+        column.stroke("#A86C14");
+
+
 
         // Modify column chart tooltip properties
         column.tooltip()

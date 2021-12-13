@@ -371,11 +371,22 @@ class StepCounterListener<stepsCompleted> implements SensorEventListener {
                     mACCStepCounter += 1;
 
                     // TODO 10: Send a notification when the goal is reached
-                    if (mACCStepCounter == HomeFragment.stepsGoal){
+                    if (mACCStepCounter == 0 ){
+
+
+
+
+
+
+                    }
+                    else if (mACCStepCounter == HomeFragment.stepsGoal){
                          mNotifyManager.notify(NOTIFICATION_ID, notificationBuilder.build());
                     }
                     else if (mACCStepCounter == (HomeFragment.stepsGoal)/2) {
-                        mNotifyManager.notify(NOTIFICATION_ID, notificationBuilder.build());
+
+
+                        mNotifyManager.notify(NOTIFICATION_ID, notificationBuilder.setContentText("Hola pinguinito")
+                                                                                  .setContentTitle("Congratulations Miss pinguin").build());
                     }
 
                     // Update the TextView and the ProgressBar
