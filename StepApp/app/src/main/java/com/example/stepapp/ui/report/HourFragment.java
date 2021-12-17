@@ -108,7 +108,7 @@ public class HourFragment  extends Fragment {
     public Cartesian createColumnChart(){
         //***** Read data from SQLiteDatabase *********/
         // Get the map with hours and number of steps for today from the database and initialize it to variable stepsByHour
-        stepsByHour = StepAppOpenHelper.loadStepsByHour(getContext(), current_time);
+        stepsByHour = StepAppOpenHelper.loadStepsByHour(getContext(), current_time,"guest");
 
         // Creating a new map that contains hours of the day from 0 to 24 and number of steps during each hour set to 0
         Map<Integer, Integer> graph_map = new TreeMap<>();

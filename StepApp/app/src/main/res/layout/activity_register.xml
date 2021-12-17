@@ -55,10 +55,38 @@
         android:textColorHint="#B7FFFFFF"
         android:textStyle="bold" />
     <EditText
+        android:id="@+id/height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/age"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/input_shape"
+        android:hint="Height"
+        android:inputType="textNoSuggestions"
+        android:padding="16dp"
+        android:textColorHint="#B7FFFFFF"
+        android:textStyle="bold" />
+    <Spinner
+        android:id="@+id/Sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/height"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/input_shape"
+        android:padding="16dp"
+        android:textColorHint="#B7FFFFFF"
+        android:text="#B7FFFFFF"
+        android:textStyle="bold" />
+    <EditText
+        android:id="@+id/input_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/age"
+        android:layout_below="@id/Sex"
         android:layout_marginTop="20dp"
         android:layout_marginRight="70dp"
         android:background="@drawable/input_shape"
@@ -67,9 +95,10 @@
         android:hint="Email"
         android:textStyle="bold"
         android:textColorHint="#B7FFFFFF"
-        android:id="@+id/input_email" />
+         />
 
     <EditText
+        android:id="@+id/login_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -82,7 +111,7 @@
         android:hint="Password"
         android:textStyle="bold"
         android:textColorHint="#B7FFFFFF"
-        android:id="@+id/login_password" />
+         />
 
 
 

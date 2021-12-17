@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_penguin_background.png.flat",
-        "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-mdpi/ic_penguin_background.png"
-    },
-    {
         "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/drawable_side_nav_bar.xml.flat",
         "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/drawable/side_nav_bar.xml"
+    },
+    {
+        "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_penguin_background.png.flat",
+        "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-mdpi/ic_penguin_background.png"
     },
     {
         "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_penguin.png.flat",
@@ -40,6 +40,10 @@
         "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/drawable/ic_menu_gallery.xml"
     },
     {
+        "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/drawable_motivpeng.gif.flat",
+        "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/drawable/motivpeng.gif"
+    },
+    {
         "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_penguin_foreground.png.flat",
         "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-xhdpi/ic_penguin_foreground.png"
     },
@@ -52,16 +56,16 @@
         "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-mdpi/ic_penguin_foreground.png"
     },
     {
-        "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+        "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_penguin.png.flat",
+        "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-mdpi/ic_penguin.png"
     },
     {
         "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/layout_fragment_profile.xml.flat",
         "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/layout/fragment_profile.xml"
     },
     {
-        "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_penguin.png.flat",
-        "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-mdpi/ic_penguin.png"
+        "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_phone_foreground.png.flat",
@@ -122,6 +126,10 @@
     {
         "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_background.png.flat",
         "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/layout_fragment_weight.xml.flat",
+        "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/layout/fragment_weight.xml"
     },
     {
         "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_penguin_round.png.flat",
@@ -206,6 +214,10 @@
     {
         "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_phone_foreground.png.flat",
         "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/mipmap-mdpi/ic_phone_foreground.png"
+    },
+    {
+        "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/layout_fragment_personal_profile.xml.flat",
+        "source": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/res/layout/fragment_personal_profile.xml"
     },
     {
         "merged": "/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_penguin_background.png.flat",

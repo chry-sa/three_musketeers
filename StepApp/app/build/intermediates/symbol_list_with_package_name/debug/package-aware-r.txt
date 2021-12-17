@@ -61,6 +61,7 @@ array crypto_fingerprint_fallback_prefixes
 array crypto_fingerprint_fallback_vendors
 array delay_showing_prompt_models
 array hide_fingerprint_instantly_prefixes
+array sex_array
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -427,8 +428,10 @@ attr fontVariationSettings
 attr fontWeight
 attr foregroundInsidePadding
 attr framePosition
+attr freezesAnimation
 attr gapBetweenBars
 attr gestureInsetBottomIgnored
+attr gifSource
 attr goIcon
 attr graph
 attr haloColor
@@ -465,6 +468,7 @@ attr initialActivityCount
 attr insetForeground
 attr isLightTheme
 attr isMaterialTheme
+attr isOpaque
 attr itemBackground
 attr itemFillColor
 attr itemHorizontalPadding
@@ -583,6 +587,7 @@ attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
 attr logo
 attr logoDescription
+attr loopCount
 attr materialAlertDialogBodyTextStyle
 attr materialAlertDialogTheme
 attr materialAlertDialogTitleIconStyle
@@ -1628,6 +1633,7 @@ drawable material_ic_keyboard_arrow_left_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable motivpeng
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1669,6 +1675,7 @@ id SHOW_ALL
 id SHOW_PATH
 id SHOW_PROGRESS
 id SYM
+id Sex
 id TOP_END
 id TOP_START
 id accelerate
@@ -1839,6 +1846,7 @@ id graph
 id graph_wrap
 id group_divider
 id groups
+id height
 id hideable
 id home
 id homeAsUp
@@ -1856,6 +1864,7 @@ id input_email
 id invisible
 id italic
 id item_touch_helper_previous_elevation
+id joke
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -1908,7 +1917,6 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id multiply
-id nav_calories
 id nav_controller_view_tag
 id nav_daily
 id nav_day
@@ -1919,6 +1927,7 @@ id nav_hour
 id nav_profile
 id nav_view
 id nav_weekly
+id nav_weight
 id navigation_header_container
 id never
 id noScroll
@@ -2036,6 +2045,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textView5
+id textView_10
 id text_input_end_icon
 id text_input_start_icon
 id textinput_counter
@@ -2074,6 +2084,8 @@ id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
 id web_view
+id weight
+id weightLineChart
 id withText
 id withinBounds
 id wrap
@@ -2164,7 +2176,9 @@ layout fingerprint_dialog_layout
 layout fragment_day
 layout fragment_home
 layout fragment_hour
+layout fragment_personal_profile
 layout fragment_profile
+layout fragment_weight
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title
@@ -2307,12 +2321,12 @@ string img_folder
 string item_view_role_description
 string material_slider_range_end
 string material_slider_range_start
-string menu_calories
 string menu_day
 string menu_hour
 string menu_profile
 string menu_report
 string menu_steps
+string menu_weight
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_content_description
@@ -2370,6 +2384,7 @@ string steps
 string today
 string toggle_start
 string toggle_stop
+string weight_report
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -3123,6 +3138,8 @@ styleable ForegroundLinearLayout android_foreground android_foregroundGravity fo
 styleable Fragment android_name android_id android_tag
 styleable FragmentContainerView android_name android_tag
 styleable FragmentNavigator android_name
+styleable GifTextureView gifSource isOpaque
+styleable GifView freezesAnimation loopCount
 styleable GradientColor android_startColor android_endColor android_type android_centerX android_centerY android_gradientRadius android_tileMode android_centerColor android_startX android_startY android_endX android_endY
 styleable GradientColorItem android_color android_offset
 styleable ImageFilterView altSrc brightness contrast crossfade overlay round roundPercent saturation warmth

@@ -12,7 +12,7 @@
     <string name="menu_hour">Penguin Hour</string>
     <string name="menu_day">Penguin Day</string>
     <string name="menu_profile">Penguin Profile</string>
-    <string name="menu_calories">Penguin Calories</string>
+    <string name="menu_weight">Penguin Weight</string>
     <string name="goal">Goal: %1$d</string>
     <string name="_0">0</string>
     <string name="steps">Steps</string>
@@ -31,6 +31,21 @@
     <string name="daily_report">Daily report</string>
     <string name="img_folder">app_images</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="weight_report">Weight Journey</string>
+
+
+
+
+
+    <string-array name="sex_array">
+        <item>Select Sex</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+
 
 </resources>
 

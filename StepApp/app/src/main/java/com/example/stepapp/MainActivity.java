@@ -12,6 +12,8 @@ import com.example.stepapp.ui.home.HomeFragment;
 import com.example.stepapp.ui.profile.ProfileFragment;
 import com.example.stepapp.ui.report.DayFragment;
 import com.example.stepapp.ui.report.HourFragment;
+import com.example.stepapp.ui.report.P_ProfileFragment;
+import com.example.stepapp.ui.report.WeightFragment;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_hour,R.id.nav_day, R.id.nav_profile)
+                R.id.nav_home, R.id.nav_hour,R.id.nav_day, R.id.nav_profile, R.id.nav_weight)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -125,15 +127,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.nav_profile:
-                fragmentClass = ProfileFragment.class;
+                fragmentClass = P_ProfileFragment.class;
                 if (getSupportActionBar() != null) {
                     getSupportActionBar().setTitle("Penguin Profile");
                 }
                 break;
-            case R.id.nav_calories:
-                fragmentClass = ProfileFragment.class;
+            case R.id.nav_weight:
+                fragmentClass = WeightFragment.class;
                 if (getSupportActionBar() != null) {
-                    getSupportActionBar().setTitle("Penguin Calories");
+                    getSupportActionBar().setTitle("Penguin Weight");
                 }
                 break;
             default:

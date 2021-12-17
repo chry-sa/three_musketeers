@@ -28,9 +28,17 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
 
     public static final String TABLE_NAME_2= "Users";
     public static final String KEY_USER= "user";
+    public static final String KEY_MAIN_USER= "main_user";
     public static final String KEY_AGE= "age";
+    public static final String KEY_HEIGHT= "height";
+    public static final String KEY_SEX= "sex";
     public static final String KEY_EMAIL= "email";
     public static final String KEY_PASS= "password";
+
+
+    public static final String TABLE_NAME_3 = "wei_table";
+    public static final String KEY_WEIGHT= "weight";
+
 
 
 
@@ -42,9 +50,14 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
             KEY_ID + " INTEGER PRIMARY KEY, " +KEY_USER +" TEXT, "+ KEY_DAY + " TEXT, " + KEY_HOUR + " TEXT, "
             + KEY_TIMESTAMP + " TEXT);";
 
-    public static final String CREATE_USER_TABLE_SQL = "CREATE TABLE " + TABLE_NAME_2 + " (" +
-            KEY_USER + " TEXT PRIMARY KEY," + KEY_AGE + " INTEGER, "  + KEY_EMAIL + " TEXT, " + KEY_PASS + " TEXT);";
 
+    public static final String CREATE_USER_TABLE_SQL = "CREATE TABLE " + TABLE_NAME_2 + " (" +
+            KEY_USER + " TEXT PRIMARY KEY," +KEY_MAIN_USER +" INTEGER,"+KEY_SEX+" TEXT, " +KEY_HEIGHT+" REAL, " +KEY_AGE  +" INTEGER, "  + KEY_EMAIL + " TEXT, " + KEY_PASS + " TEXT);";
+
+
+    public static final String CREATE_WEIGHT_SQL = "CREATE TABLE " + TABLE_NAME_3 + " (" +
+            KEY_ID + " INTEGER PRIMARY KEY, " +KEY_USER +" TEXT, "+ KEY_WEIGHT +" REAL, "+ KEY_DAY + " TEXT, " + KEY_HOUR + " TEXT, "
+            + KEY_TIMESTAMP + " TEXT);";
 
     // The constructor
     public StepAppOpenHelper(Context context) {
@@ -57,6 +70,7 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLE_SQL);
         db.execSQL(CREATE_USER_TABLE_SQL);
+        db.execSQL(CREATE_WEIGHT_SQL);
 
     }
 
@@ -150,7 +164,7 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
      * @return map: map with key-value pairs hour->number of steps
      */
     //
-    public static Map<Integer, Integer> loadStepsByHour(Context context, String date){
+    public static Map<Integer, Integer> loadStepsByHour(Context context, String date,String user ){
         // 1. Define a map to store the hour and number of steps as key-value pairs
         Map<Integer, Integer>  map = new HashMap<> ();
 
@@ -160,7 +174,7 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
 
         // 3. Define the query to get the data
         Cursor cursor = database.rawQuery("SELECT hour, COUNT(*)  FROM num_steps " +
-                "WHERE day = ?  GROUP BY hour ORDER BY  hour ASC ", new String [] {date});
+                "WHERE day = ? and user = ?  GROUP BY hour ORDER BY  hour ASC ", new String [] {date,user});
 
         // 4. Iterate over returned elements on the cursor
         cursor.moveToFirst();
@@ -227,7 +241,7 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
      * @return map: map with key-value pairs hour->number of steps
      */
     //
-    public static Map<String, Integer> loadStepsByDay(Context context){
+    public static Map<String, Integer> loadStepsByDay(Context context,String user){
         // 1. Define a map to store the hour and number of steps as key-value pairs
         Map<String, Integer>  map = new TreeMap<>();
 
@@ -236,8 +250,8 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
         SQLiteDatabase database = databaseHelper.getReadableDatabase();
 
         // 3. Define the query to get the data
-        Cursor cursor = database.rawQuery("SELECT day, COUNT(*)  FROM num_steps " +
-                "GROUP BY day ORDER BY day ASC ", new String [] {});
+        Cursor cursor = database.rawQuery("SELECT day, COUNT(*)  FROM num_steps " +"WHERE user = ?" +
+                "GROUP BY day ORDER BY day ASC ", new String [] {user});
 
         // 4. Iterate over returned elements on the cursor
         cursor.moveToFirst();

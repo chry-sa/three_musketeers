@@ -116,6 +116,7 @@ public class HomeFragment extends Fragment {
         // Instantiate the StepCounterListener
         listener = new StepCounterListener(notifyBuilder, database, stepsCountTextView, stepsCountProgressBar);
 
+
         // Toggle group button
         materialButtonToggleGroup = (MaterialButtonToggleGroup) root.findViewById(R.id.toggleButtonGroup);
         materialButtonToggleGroup.addOnButtonCheckedListener(new MaterialButtonToggleGroup.OnButtonCheckedListener() {
@@ -373,9 +374,9 @@ class StepCounterListener<stepsCompleted> implements SensorEventListener {
                     // TODO 10: Send a notification when the goal is reached
                     if (mACCStepCounter == 0 ){
 
-
-
-
+                        mNotifyManager.notify(NOTIFICATION_ID, notificationBuilder.setContentTitle("A new day in your weight-loss journey.")
+                                .setContentText("Time to move your cold feet, penguin.")
+                                .build());
 
 
                     }
@@ -383,10 +384,14 @@ class StepCounterListener<stepsCompleted> implements SensorEventListener {
                          mNotifyManager.notify(NOTIFICATION_ID, notificationBuilder.build());
                     }
                     else if (mACCStepCounter == (HomeFragment.stepsGoal)/2) {
-
-
-                        mNotifyManager.notify(NOTIFICATION_ID, notificationBuilder.setContentText("Hola pinguinito")
-                                                                                  .setContentTitle("Congratulations Miss pinguin").build());
+                        mNotifyManager.notify(NOTIFICATION_ID, notificationBuilder.setContentTitle("You can do it! I believe in you.")
+                                                                                   .setContentText("One small step for a penguin, one giant leap for humankind.")
+                                                                                  .build());
+                    }
+                    else if (mACCStepCounter == (HomeFragment.stepsGoal)/3) {
+                        mNotifyManager.notify(NOTIFICATION_ID, notificationBuilder.setContentTitle("You are doing great!")
+                                                                                  .setContentText("A penguin cannot become a giraffe, so just be the best penguin you can be.")
+                                                                                  .build());
                     }
 
                     // Update the TextView and the ProgressBar

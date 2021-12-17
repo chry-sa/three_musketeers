@@ -51,7 +51,7 @@ public class DayFragment extends Fragment {
 
     public Cartesian createColumnChart(){
         //Read data from SQLiteDatabase
-        stepsByHour = StepAppOpenHelper.loadStepsByDay(getContext());
+        stepsByHour = StepAppOpenHelper.loadStepsByDay(getContext(),"guest");
 
         // Create and get the cartesian coordinate system for column chart
         Cartesian cartesian = AnyChart.column();

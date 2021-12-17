@@ -19,14 +19,16 @@
             android:title="@string/menu_day" />
 
         <item
+            android:id="@+id/nav_weight"
+            android:icon="@drawable/ic_calories"
+            android:title="@string/menu_weight" />
+
+        <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_menu_person"
             android:title="@string/menu_profile" />
 
-        <item
-            android:id="@+id/nav_calories"
-            android:icon="@drawable/ic_calories"
-            android:title="@string/menu_calories" />
+
     </group>
 </menu>
 
