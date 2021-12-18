@@ -156,6 +156,8 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
         return numSteps;
     }
 
+
+
     /**
      * Utility function to get the number of steps by hour for current date
      *
@@ -271,6 +273,39 @@ public class StepAppOpenHelper extends SQLiteOpenHelper {
         // 6. Return the map with hours and number of steps
         return map;
     }
+
+    public static ArrayList<String>  loadAgeHeight(Context context, String user){
+
+        ArrayList<String>   list_ageheight = new ArrayList<String>() ;
+
+
+
+        // 2. Get the readable database
+        StepAppOpenHelper databaseHelper = new StepAppOpenHelper(context);
+        SQLiteDatabase database = databaseHelper.getReadableDatabase();
+
+        // 3. Define the query to get the data
+        Cursor cursor = database.rawQuery("SELECT age,height FROM Users " +"WHERE user = ?", new String [] {user});
+
+        // 4. Iterate over returned elements on the cursor
+
+
+        cursor.moveToFirst();
+        Log.d("Penguin Profile", "Age: " + String.valueOf(cursor.getString(0)));
+        Log.d("Penguin Profile", "Height: " + String.valueOf(cursor.getString(1)));
+
+
+        list_ageheight.add(String.valueOf(cursor.getString(0)));
+        list_ageheight.add(String.valueOf(cursor.getString(1)));
+
+        // 5. Close the cursor and database
+        cursor.close();
+        database.close();
+
+        // 6. Return the map with hours and number of steps
+        return list_ageheight;
+    }
+
 }
 
 

@@ -4,22 +4,58 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.anychart.AnyChartView;
+import com.anychart.chart.common.dataentry.DataEntry;
+import com.anychart.chart.common.dataentry.ValueDataEntry;
+import com.anychart.charts.Cartesian;
+import com.example.stepapp.MainActivity;
 import com.example.stepapp.R;
+import com.example.stepapp.StepAppOpenHelper;
 
-public class P_ProfileFragment {
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
+public class P_ProfileFragment extends Fragment {
 
-        if (container != null) {
-            container.removeAllViews();
-        }
+    public String user="";
+    public TextView userTextview;
+    public TextView ageTextview;
+    public TextView heightTextview;
+
+    public ArrayList<String> ageHeight = new ArrayList<String> ();
+
+    @Override
+    public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
+
         View root = inflater.inflate(R.layout.fragment_personal_profile, container, false);
+
+        user = MainActivity.logged_user;
+        userTextview = (TextView) root.findViewById(R.id.txt);
+        userTextview.setText(String.valueOf(user));
+
+        ageHeight = StepAppOpenHelper.loadAgeHeight(getContext(),user);
+
+
+
+        ageTextview = (TextView) root.findViewById(R.id.age);
+        ageTextview.setText("Age: "+String.valueOf(ageHeight.get(0)));
+
+        heightTextview = (TextView) root.findViewById(R.id.height);
+        heightTextview.setText("Height: "+String.valueOf(ageHeight.get(1)));
+
 
         return root;
     }
+
+
+
 
 }

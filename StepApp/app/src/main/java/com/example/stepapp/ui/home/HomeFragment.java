@@ -53,6 +53,7 @@ public class HomeFragment extends Fragment {
     public TextView stepsCountTextView;
     public ProgressBar stepsCountProgressBar;
     public TextView goalTextView;
+    public String user ="";
 
     // ACC sensors.
     private Sensor mSensorACC;
@@ -63,7 +64,7 @@ public class HomeFragment extends Fragment {
     private Sensor mSensorStepDetector;
 
     // Num of steps completed
-    static int stepsCompleted = 0;
+    public static int stepsCompleted = 0;
     static int stepsGoal = 10;
 
     //TODO 6: Create a constant for the notification channel ID
@@ -79,10 +80,12 @@ public class HomeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
+
+
         // Get the number of steps stored in the current date
         Date cDate = new Date();
         String fDate = new SimpleDateFormat("yyyy-MM-dd").format(cDate);
-        stepsCompleted = StepAppOpenHelper.loadSingleRecord(getContext(), fDate);
+        stepsCompleted = StepAppOpenHelper.loadSingleRecord(getContext(), fDate);//
 
 
         // Text view & ProgressBar
@@ -334,6 +337,7 @@ class StepCounterListener<stepsCompleted> implements SensorEventListener {
 
     public void peakDetection() {
         int windowSize = 20;
+        String user = MainActivity.logged_user;
 
         /* Peak detection algorithm derived from: A Step Counter Service for Java-Enabled Devices Using a Built-In Accelerometer, Mladenov et al.
          */
@@ -401,6 +405,7 @@ class StepCounterListener<stepsCompleted> implements SensorEventListener {
                     // Insert the data in the database
                     ContentValues values = new ContentValues();
                     values.put(StepAppOpenHelper.KEY_TIMESTAMP, timePointList.get(i));
+                    values.put(StepAppOpenHelper.KEY_USER, user);
                     values.put(StepAppOpenHelper.KEY_DAY, day);
                     values.put(StepAppOpenHelper.KEY_HOUR, hour);
                     database.insert(StepAppOpenHelper.TABLE_NAME, null, values);

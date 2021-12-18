@@ -31,8 +31,10 @@ import com.anychart.enums.Anchor;
 import com.anychart.enums.HoverMode;
 import com.anychart.enums.Position;
 import com.anychart.enums.TooltipPositionMode;
+import com.example.stepapp.MainActivity;
 import com.example.stepapp.R;
 import com.example.stepapp.StepAppOpenHelper;
+import com.example.stepapp.ui.home.HomeFragment;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -48,6 +50,7 @@ public class HourFragment  extends Fragment {
 
     public int todaySteps = 0;
     TextView numStepsTextView;
+    TextView numCaloriesTextView;
     AnyChartView anyChartView;
 
     Button shareButton;
@@ -55,9 +58,22 @@ public class HourFragment  extends Fragment {
     Date cDate = new Date();
     String current_time = new SimpleDateFormat("yyyy-MM-dd").format(cDate);
 
+    //Current User
+    public String user="";
+
     public Map<Integer, Integer> stepsByHour = null;
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
+
+        //Variable where burned calories will be stored. Through research we discovered that a human burns  between 0.04 and 0.06 calories per step
+        //
+        double Calories = HomeFragment.stepsCompleted*0.05;
+
+
+
+        user = MainActivity.logged_user;
 
         if (container != null) {
             container.removeAllViews();
@@ -78,6 +94,10 @@ public class HourFragment  extends Fragment {
         numStepsTextView = root.findViewById(R.id.numStepsTextView);
         todaySteps = StepAppOpenHelper.loadSingleRecord(getContext(), current_time);
         numStepsTextView.setText(String.valueOf(todaySteps));
+
+        // Add the number of calories in text view
+        numCaloriesTextView = root.findViewById(R.id.numCalories);
+        numCaloriesTextView.setText(String.valueOf(Calories));
 
         shareButton = root.findViewById(R.id.shareButton);
         shareButton.setOnClickListener(new View.OnClickListener() {
@@ -107,14 +127,20 @@ public class HourFragment  extends Fragment {
      */
     public Cartesian createColumnChart(){
         //***** Read data from SQLiteDatabase *********/
-        // Get the map with hours and number of steps for today from the database and initialize it to variable stepsByHour
-        stepsByHour = StepAppOpenHelper.loadStepsByHour(getContext(), current_time,"guest");
+
+        //Counter of the burned Calories
+        Integer  calories_burned=0;
+        stepsByHour = StepAppOpenHelper.loadStepsByHour(getContext(), current_time,user);
 
         // Creating a new map that contains hours of the day from 0 to 24 and number of steps during each hour set to 0
         Map<Integer, Integer> graph_map = new TreeMap<>();
         for (int i = 0; i < 25; i++) {
             graph_map.put(i, 0);
         }
+
+
+
+
 
         // Replace the number of steps for each hour in graph_map with the number of steps read from the database
         graph_map.putAll(stepsByHour);
@@ -127,8 +153,16 @@ public class HourFragment  extends Fragment {
         // 2. Create data entries for x and y axis of the graph
         List<DataEntry> data = new ArrayList<>();
 
-        for (Map.Entry<Integer,Integer> entry : graph_map.entrySet())
+        for (Map.Entry<Integer,Integer> entry : graph_map.entrySet()){
             data.add(new ValueDataEntry(entry.getKey(), entry.getValue()));
+
+            //Accumulated calories through the day
+            calories_burned = calories_burned + entry.getValue();
+
+
+
+        }
+
 
         // 3. Add the data to column chart and get the columns
         Column column = cartesian.column(data);

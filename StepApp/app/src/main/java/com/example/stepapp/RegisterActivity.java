@@ -70,11 +70,13 @@ public class RegisterActivity extends AppCompatActivity {
                 EditText email_   = (EditText)findViewById(R.id.input_email);
                 EditText passw   = (EditText)findViewById(R.id.login_password);
                 EditText age   = (EditText)findViewById(R.id.age);
+                EditText height   = (EditText)findViewById(R.id.height);
 
                 String s_user_name= user_name.getText().toString().trim();
                 String s_email= email_.getText().toString().trim();
                 String s_passw= passw.getText().toString().trim();
                 String s_age= age.getText().toString().trim();
+                String s_height   = height.getText().toString().trim();
 
 
                 if (s_user_name.equals("") || s_email.equals("") || s_passw.equals("") || s_age.equals("")){
@@ -92,6 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                     values.put(StepAppOpenHelper.KEY_AGE, s_age);
                     values.put(StepAppOpenHelper.KEY_EMAIL, s_email);
                     values.put(StepAppOpenHelper.KEY_PASS, s_passw);
+                    values.put(StepAppOpenHelper.KEY_HEIGHT, s_height);
                     database.insert(StepAppOpenHelper.TABLE_NAME_2, null, values);
 
                     Toast.makeText(RegisterActivity.this,"User created successfully", Toast.LENGTH_LONG).show();

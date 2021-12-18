@@ -1936,6 +1936,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id numCalories
 id numStepsTextView
 id off
 id on
@@ -2287,6 +2288,7 @@ string action_settings
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
+string calories
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern

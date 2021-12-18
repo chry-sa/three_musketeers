@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean runningQOrLater =
             android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q;
 
-    public String logged_user="guest";
+    public  static String logged_user="guest";
 
 
 
@@ -61,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
             logged_user = extras.getString("userLogin");
 
             Log.d("User logged", logged_user);
-
-
 
         }
 
@@ -149,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // Insert the fragment by replacing any existing fragment
+
+
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.nav_host_fragment, fragment).commit();
 
