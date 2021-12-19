@@ -134,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                 String user ="" ;
                 user= StepAppOpenHelper.loadMainUser(getApplicationContext());
 
-                if (user ==null){
+                if (user ==null||user.equals("")){
                     Toast.makeText(getApplicationContext(),
                             "You need to register as the principal user!", Toast.LENGTH_SHORT).show();
                 }
