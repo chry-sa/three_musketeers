@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.anychart.AnyChart;
 import com.anychart.AnyChartView;
@@ -18,6 +19,7 @@ import com.anychart.enums.Anchor;
 import com.anychart.enums.HoverMode;
 import com.anychart.enums.Position;
 import com.anychart.enums.TooltipPositionMode;
+import com.example.stepapp.MainActivity;
 import com.example.stepapp.R;
 import com.example.stepapp.StepAppOpenHelper;
 
@@ -30,28 +32,56 @@ import java.util.TreeMap;
 public class DayFragment extends Fragment {
 
     AnyChartView anyChartView;
-    public Map<String, Integer> stepsByHour = null;
+    public Map<String, Integer> stepsByDay = null;
+    public String user="";
+    public int allSteps=0;
+
+    TextView numStepsTextView;
+    TextView numCaloriesTextView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+        user= MainActivity.logged_user;
         View root = inflater.inflate(R.layout.fragment_day, container, false);
+
+        //Updating number of steps and calories
+        stepsByDay = StepAppOpenHelper.loadStepsByDay(getContext(),user);
+
+        for (Map.Entry<String,Integer> entry : stepsByDay.entrySet())
+            allSteps=allSteps+ entry.getValue().intValue();
+
+
+
+
+        numStepsTextView = root.findViewById(R.id.numStepsTextView);
+        numStepsTextView.setText(String.valueOf(allSteps));
+
+        // Add the number of calories in text view
+        numCaloriesTextView = root.findViewById(R.id.numCalories);
+
+        //Variable where burned calories will be stored. Through research we discovered that a human burns  between 0.04 and 0.06 calories per step
+
+        double Calories = allSteps*0.05;
+        numCaloriesTextView.setText(String.format("%.2f" ,Calories));
+
 
         // Create column chart
         anyChartView = root.findViewById(R.id.dayBarChart);
         anyChartView.setProgressBar(root.findViewById(R.id.loadingBar2));
 
-        Cartesian cartesian = createColumnChart();
+        Cartesian cartesian = createColumnChart(user);
         anyChartView.setBackgroundColor("#00000000");
         anyChartView.setChart(cartesian);
 
         return root;
     }
 
-    public Cartesian createColumnChart(){
+    public Cartesian createColumnChart(String user){
         //Read data from SQLiteDatabase
-        stepsByHour = StepAppOpenHelper.loadStepsByDay(getContext(),"guest");
+        stepsByDay = StepAppOpenHelper.loadStepsByDay(getContext(),user);
 
         // Create and get the cartesian coordinate system for column chart
         Cartesian cartesian = AnyChart.column();
@@ -59,7 +89,7 @@ public class DayFragment extends Fragment {
         // Create data entries for x and y axis of the graph
         List<DataEntry> data = new ArrayList<>();
 
-        for (Map.Entry<String,Integer> entry : stepsByHour.entrySet())
+        for (Map.Entry<String,Integer> entry : stepsByDay.entrySet())
             data.add(new ValueDataEntry(entry.getKey(), entry.getValue()));
 
         // Set the data for column chart and get the columns

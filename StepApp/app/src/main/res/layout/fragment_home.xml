@@ -10,7 +10,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/penguinbottom"/>
+        android:background="@drawable/penguinbottom">
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -74,6 +77,46 @@
         app:layout_constraintTop_toTopOf="parent"
         android:indeterminateTint="@color/OrangeBeak"/>
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar">
+
+        <EditText
+            android:id="@+id/new_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:background="@drawable/input_shape"
+            android:hint="Adjust Goal"
+            android:inputType="textPersonName"
+            android:lineSpacingExtra="8sp"
+            android:layout_marginRight="100dp"
+            android:padding="16dp"
+            android:singleLine="true"
+            android:textColorHint="#B7FFFFFF"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/toggleGoal"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="120dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:text="@string/toggle_goal"
+            android:textColor="@color/OrangeBeak"
+           />
+
+    </LinearLayout>
+
 
     <com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/toggleButtonGroup"
@@ -92,7 +135,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toggle_start"
-            android:textColor="#A86C14"
+            android:textColor="@color/OrangeBeak"
             app:icon="@drawable/ic_play_24px"
             app:iconTint="#A86C14" />
 
@@ -102,9 +145,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/toggle_stop"
-            android:textColor="#A86C14"
+            android:textColor="@color/OrangeBeak"
             app:icon="@drawable/ic_stop_24px"
             app:iconTint="#A86C14" />
+
+
 
     </com.google.android.material.button.MaterialButtonToggleGroup>
 

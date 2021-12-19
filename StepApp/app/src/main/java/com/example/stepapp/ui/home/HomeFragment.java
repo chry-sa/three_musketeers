@@ -23,6 +23,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +44,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
+import java.util.regex.Pattern;
 
 import static com.example.stepapp.ui.home.HomeFragment.mNotifyManager;
 
@@ -80,12 +83,16 @@ public class HomeFragment extends Fragment {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
+        user=MainActivity.logged_user;
+
 
 
         // Get the number of steps stored in the current date
         Date cDate = new Date();
         String fDate = new SimpleDateFormat("yyyy-MM-dd").format(cDate);
-        stepsCompleted = StepAppOpenHelper.loadSingleRecord(getContext(), fDate);//
+        stepsGoal = StepAppOpenHelper.loadGoal(getContext(),user);//
+
+        stepsCompleted = StepAppOpenHelper.loadSingleRecord(getContext(), fDate,user);//
 
 
         // Text view & ProgressBar
@@ -158,6 +165,7 @@ public class HomeFragment extends Fragment {
 
                     // Unregister the listener
                     mSensorManager.unregisterListener(listener);
+
                 }
             }
         });
@@ -165,10 +173,59 @@ public class HomeFragment extends Fragment {
 
         //Call createNotificationChannel()
         createNotificationChannel();
+
+        Button modGoal = root.findViewById(R.id.toggleGoal);
+
+        modGoal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditText nGoal   = (EditText) root.findViewById(R.id.new_goal);
+
+                String s_goal= nGoal.getText().toString().trim();
+
+
+                if (s_goal.equals("") || isNumeric(s_goal)==false){
+
+                    Toast toast = Toast.makeText(v.getContext(), "Introduce a valid value! Penguin.", Toast.LENGTH_SHORT);
+                    toast.show();
+                }
+                else{
+
+                    Toast toast = Toast.makeText(v.getContext(), "Penguin! New Goal.", Toast.LENGTH_SHORT);
+                    toast.show();
+
+                    StepAppOpenHelper.updateGoal(getContext(),user,Integer.parseInt(s_goal));
+
+                    stepsGoal = StepAppOpenHelper.loadGoal(getContext(),user);
+
+                    String goal = String.format(res.getString(R.string.goal), stepsGoal);
+                    goalTextView.setText(goal);
+
+                    stepsCountProgressBar.setMax(stepsGoal);
+                    stepsCountProgressBar.setProgress(stepsCompleted);
+
+
+
+                }
+            }
+        });
+
+
+
+
+
         return root;
 
 
     }
+    public boolean isNumeric(String strNum) {
+        Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+        if (strNum == null) {
+            return false;
+        }
+        return pattern.matcher(strNum).matches();
+    }
+
 
     @Override
     public void onDestroyView() {
@@ -423,6 +480,7 @@ class StepCounterListener<stepsCompleted> implements SensorEventListener {
         mAndroidStepCounter += (int) step;
         Log.d("NUM STEPS ANDROID", "Num.steps: " + String.valueOf(mAndroidStepCounter));
     }
+
 
 }
 

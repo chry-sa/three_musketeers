@@ -33,41 +33,40 @@
 21-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:11:9-49
 22        android:supportsRtl="true"
 22-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:12:9-35
-23        android:testOnly="true"
-24        android:theme="@style/AppTheme.NoActionBar" >
-24-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:13:9-52
-25        <activity android:name="com.example.stepapp.LoginActivity" >
-25-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:14:9-20:20
-25-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:14:19-48
-26            <intent-filter>
-26-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:15:13-19:29
-27                <action android:name="android.intent.action.MAIN" />
-27-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:16:17-69
-27-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:16:25-66
-28
-29                <category android:name="android.intent.category.LAUNCHER" />
-29-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:18:17-77
-29-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:18:27-74
-30            </intent-filter>
-31        </activity>
-32        <activity android:name="com.example.stepapp.RegisterActivity" />
-32-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:21:9-53
-32-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:21:19-51
-33        <activity android:name="com.example.stepapp.MainActivity" >
-33-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:22:9-24:20
-33-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:22:19-47
-34        </activity>
-35
-36        <provider
-36-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
-37            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-37-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
-38            android:authorities="com.example.stepapp.lifecycle-process"
-38-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
-39            android:exported="false"
-39-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
-40            android:multiprocess="true" />
-40-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
-41    </application>
-42
-43</manifest>
+23        android:theme="@style/AppTheme.NoActionBar" >
+23-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:13:9-52
+24        <activity android:name="com.example.stepapp.LoginActivity" >
+24-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:14:9-20:20
+24-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:14:19-48
+25            <intent-filter>
+25-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:15:13-19:29
+26                <action android:name="android.intent.action.MAIN" />
+26-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:16:17-69
+26-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:16:25-66
+27
+28                <category android:name="android.intent.category.LAUNCHER" />
+28-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:18:17-77
+28-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:18:27-74
+29            </intent-filter>
+30        </activity>
+31        <activity android:name="com.example.stepapp.RegisterActivity" />
+31-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:21:9-53
+31-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:21:19-51
+32        <activity android:name="com.example.stepapp.MainActivity" >
+32-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:22:9-24:20
+32-->/Users/oasc/Documents/GitHub/three_musketeers/StepApp/app/src/main/AndroidManifest.xml:22:19-47
+33        </activity>
+34
+35        <provider
+35-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+36            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+36-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+37            android:authorities="com.example.stepapp.lifecycle-process"
+37-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+38            android:exported="false"
+38-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+39            android:multiprocess="true" />
+39-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/oasc/.gradle/caches/transforms-3/51a76857de97cd111203b3226346932c/transformed/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+40    </application>
+41
+42</manifest>

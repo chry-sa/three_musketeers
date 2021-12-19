@@ -8,10 +8,10 @@ import androidx.core.content.ContextCompat;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,6 +32,8 @@ public class LoginActivity extends AppCompatActivity {
     private BiometricPrompt biometricPrompt;
     private BiometricPrompt.PromptInfo promptInfo;
 
+    public String user="";
+
     private boolean runningQOrLater =
             android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q;
 
@@ -49,6 +51,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
         // add login functionality
+
+        user= StepAppOpenHelper.loadMainUser(getApplicationContext());
+        Log.d("Logged", "user: " + String.valueOf(user));
+
+
         Button loginButton = findViewById(R.id.login_btn);
 
 
@@ -66,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                 // TODO: login new user
                 Integer user_c=0;
 
-                EditText user_name   = (EditText)findViewById(R.id.login_username);
+                EditText user_name   = (EditText)findViewById(R.id.new_goal);
                 EditText passw   = (EditText)findViewById(R.id.login_password);
 
                 if ( new String("").equals(user_name.getText().toString()) || new String("").equals(passw.getText().toString()) ){
@@ -109,9 +116,10 @@ public class LoginActivity extends AppCompatActivity {
                         "Authentication error: " + errString, Toast.LENGTH_SHORT)
                         .show();
                 //---------------
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                i.putExtra("userLogin","guest");
-                startActivity(i);
+                //Authentication Test-----Test Login
+                //Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                //i.putExtra("userLogin","guest");
+                //startActivity(i);
 
                 //---------------
             }
@@ -120,12 +128,28 @@ public class LoginActivity extends AppCompatActivity {
             public void onAuthenticationSucceeded(
                     @NonNull BiometricPrompt.AuthenticationResult result) {
                 super.onAuthenticationSucceeded(result);
-                Toast.makeText(getApplicationContext(),
-                        "Authentication succeeded!", Toast.LENGTH_SHORT).show();
 
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                i.putExtra("userLogin","guest");
-                startActivity(i);
+
+
+                String user ="" ;
+                user= StepAppOpenHelper.loadMainUser(getApplicationContext());
+
+                if (user ==null){
+                    Toast.makeText(getApplicationContext(),
+                            "You need to register as the principal user!", Toast.LENGTH_SHORT).show();
+                }
+                else{
+
+                    Toast.makeText(getApplicationContext(),
+                            "Authentication succeeded!", Toast.LENGTH_SHORT).show();
+
+
+                    Intent i = new Intent(LoginActivity.this, MainActivity.class);
+                    i.putExtra("userLogin",user);
+                    startActivity(i);
+                }
+
+
             }
 
             @Override

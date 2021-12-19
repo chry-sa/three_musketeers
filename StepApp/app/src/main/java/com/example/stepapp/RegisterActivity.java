@@ -1,11 +1,13 @@
 package com.example.stepapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import android.Manifest;
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
@@ -31,12 +33,56 @@ public class RegisterActivity extends AppCompatActivity {
     private boolean runningQOrLater =
             android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q;
 
+    public int main_user_reg=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
         TextView btn=findViewById(R.id.alreadyacount);
+
+       //Dialog box for main USER
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Fingerprint login");
+        builder.setMessage("Hi do you want to use your fingerprint as an additonal login method");
+
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+                // Do nothing but close the dialog
+                main_user_reg=1;
+
+                dialog.dismiss();
+            }
+        });
+
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // Do nothing
+                dialog.dismiss();
+            }
+        });
+
+
+
+        String main_user ="" ;
+        main_user= StepAppOpenHelper.loadMainUser(getApplicationContext());
+
+        if (main_user.equals("")){
+
+            AlertDialog alert = builder.create();
+            alert.show();
+
+        }
+        else{
+
+
+        }
 
 
         Spinner spinner = (Spinner) findViewById(R.id.Sex);
@@ -66,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // TODO: register new user
 
-                EditText user_name   = (EditText)findViewById(R.id.login_username);
+                EditText user_name   = (EditText)findViewById(R.id.new_goal);
                 EditText email_   = (EditText)findViewById(R.id.input_email);
                 EditText passw   = (EditText)findViewById(R.id.login_password);
                 EditText age   = (EditText)findViewById(R.id.age);
@@ -86,6 +132,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }
                 else{
 
+
                     StepAppOpenHelper databaseOpenHelper = new StepAppOpenHelper(RegisterActivity.this);
                     SQLiteDatabase database = databaseOpenHelper.getWritableDatabase();
 
@@ -95,6 +142,8 @@ public class RegisterActivity extends AppCompatActivity {
                     values.put(StepAppOpenHelper.KEY_EMAIL, s_email);
                     values.put(StepAppOpenHelper.KEY_PASS, s_passw);
                     values.put(StepAppOpenHelper.KEY_HEIGHT, s_height);
+                    values.put(StepAppOpenHelper.KEY_GOAL, 100);
+                    values.put(StepAppOpenHelper.KEY_MAIN_USER, main_user_reg);
                     database.insert(StepAppOpenHelper.TABLE_NAME_2, null, values);
 
                     Toast.makeText(RegisterActivity.this,"User created successfully", Toast.LENGTH_LONG).show();

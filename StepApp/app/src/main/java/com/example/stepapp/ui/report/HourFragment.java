@@ -67,9 +67,7 @@ public class HourFragment  extends Fragment {
 
 
 
-        //Variable where burned calories will be stored. Through research we discovered that a human burns  between 0.04 and 0.06 calories per step
-        //
-        double Calories = HomeFragment.stepsCompleted*0.05;
+
 
 
 
@@ -92,12 +90,17 @@ public class HourFragment  extends Fragment {
 
         // Add the number of steps in text view
         numStepsTextView = root.findViewById(R.id.numStepsTextView);
-        todaySteps = StepAppOpenHelper.loadSingleRecord(getContext(), current_time);
+        todaySteps = StepAppOpenHelper.loadSingleRecord(getContext(), current_time,user);
         numStepsTextView.setText(String.valueOf(todaySteps));
 
         // Add the number of calories in text view
         numCaloriesTextView = root.findViewById(R.id.numCalories);
-        numCaloriesTextView.setText(String.valueOf(Calories));
+
+        //Variable where burned calories will be stored. Through research we discovered that a human burns  between 0.04 and 0.06 calories per step
+        //
+        double Calories = todaySteps*0.05;
+        numCaloriesTextView.setText(String.format("%.2f" ,Calories));
+
 
         shareButton = root.findViewById(R.id.shareButton);
         shareButton.setOnClickListener(new View.OnClickListener() {

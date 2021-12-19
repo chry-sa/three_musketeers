@@ -27,8 +27,10 @@ public class P_ProfileFragment extends Fragment {
     public TextView userTextview;
     public TextView ageTextview;
     public TextView heightTextview;
+    public TextView weightTextview;
 
     public ArrayList<String> ageHeight = new ArrayList<String> ();
+    public double lastWeight =0;
 
     @Override
     public View onCreateView( LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -41,6 +43,8 @@ public class P_ProfileFragment extends Fragment {
         userTextview = (TextView) root.findViewById(R.id.txt);
         userTextview.setText(String.valueOf(user));
 
+        //Loading age and height for profile section
+
         ageHeight = StepAppOpenHelper.loadAgeHeight(getContext(),user);
 
 
@@ -50,6 +54,12 @@ public class P_ProfileFragment extends Fragment {
 
         heightTextview = (TextView) root.findViewById(R.id.height);
         heightTextview.setText("Height: "+String.valueOf(ageHeight.get(1)));
+
+        lastWeight = StepAppOpenHelper.loadSingleWeight(getContext(),user);
+        weightTextview = (TextView) root.findViewById(R.id.weight);
+        weightTextview.setText("Weight: "+Double.toString(lastWeight));
+
+        //Loading age and height for profile section
 
 
         return root;

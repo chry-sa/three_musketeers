@@ -20,7 +20,6 @@
         android:label="Happy feet"
         android:roundIcon="@drawable/ic_appicon"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/AppTheme.NoActionBar" >
         <activity android:name="com.example.stepapp.LoginActivity" >
             <intent-filter>

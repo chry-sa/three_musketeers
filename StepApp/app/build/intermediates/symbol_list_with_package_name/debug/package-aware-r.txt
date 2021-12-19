@@ -1846,6 +1846,7 @@ id graph
 id graph_wrap
 id group_divider
 id groups
+id guideline
 id height
 id hideable
 id home
@@ -1875,13 +1876,14 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout2
+id linearLayout3
 id listMode
 id list_item
 id loadingBar
 id loadingBar2
 id login_btn
 id login_password
-id login_username
 id masked
 id media_actions
 id message
@@ -1930,6 +1932,8 @@ id nav_weekly
 id nav_weight
 id navigation_header_container
 id never
+id new_goal
+id new_weight
 id noScroll
 id none
 id normal
@@ -1962,7 +1966,6 @@ id radio
 id ratio
 id rectangles
 id register
-id reset_password
 id reverseSawtooth
 id right
 id right_icon
@@ -2061,8 +2064,10 @@ id titleDividerNoCustom
 id title_template
 id toggle
 id toggleButtonGroup
+id toggleGoal
 id toggleStart
 id toggleStop
+id toggleweight
 id toolbar
 id top
 id topPanel
@@ -2087,6 +2092,7 @@ id visible_removing_fragment_view_tag
 id web_view
 id weight
 id weightLineChart
+id welcome_peng
 id withText
 id withinBounds
 id wrap
@@ -2384,6 +2390,7 @@ string status_bar_notification_info_overflow
 string step_not_available
 string steps
 string today
+string toggle_goal
 string toggle_start
 string toggle_stop
 string weight_report
